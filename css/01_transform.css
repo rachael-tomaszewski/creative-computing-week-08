@@ -23,8 +23,11 @@ h1 {
 }
 
 a {
-  color: blue;
+  color: red;
   text-decoration: none;
+  transition: all 2s;
+  transition-delay: .5s;
+
 }
 
 a:hover {
@@ -37,11 +40,53 @@ a:hover {
   width: 100%;
   padding: 20px;
   background: #efefef;
+  transition: all 2s;
+}
+
+.content:hover {
+  background: black;
+}
+
+.content:hover .shape {
+  transform: rotateZ(45deg) scale(1.5);
+  background: white;
+}
+
+.content:hover a {
+  color: white;
 }
 
 .shape {
+  border-radius: 100px;
   margin-left: 100px;
   width: 200px;  
   height: 200px;
-  background: red;
+  background: #bff2c8;
+  transition: transform 0.5s, background-color 2s;
+}
+
+.shape:hover {
+  transform: rotateZ(45deg) scale(1.5);
+  background: white;
+}
+
+.variation-1 {
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.variation-2 {
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.variation-3 {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }

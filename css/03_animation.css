@@ -36,17 +36,41 @@ a {
 }
 
 .shape {
-  margin: 85px;
-  width: 200px;  
+  margin: 300px;
+  width: 100px;  
   height: 200px;
   background: royalblue;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(60deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+
+
 .variation-1 {
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
 }
 
 .variation-2 {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
 }
 
 .variation-3 {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: 4;
+  animation-direction: reverse;
 }
